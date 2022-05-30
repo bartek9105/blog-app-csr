@@ -6,7 +6,7 @@ export const routesPaths = {
     new: () => "/post/new",
     details: (id: number) => `/post/${id}`,
   },
-  category: (id: number) => `/category/${id}`,
+  category: (id: any) => `/category/${id}`,
   search: () => "/search",
   saved: () => "/saved",
 };

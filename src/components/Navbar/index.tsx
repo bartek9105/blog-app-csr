@@ -26,14 +26,14 @@ const Navbar = () => {
     <nav className="text-gray-300 flex justify-between items-center p-4 bg-zinc-800">
       <Logo onClick={() => navigate(routesPaths.root(), { replace: true })} />
       <div className="flex items-center gap-4">
-        <Link to={routesPaths.search()}>
+        <Link to={"/search"}>
           <a aria-label="Search posts">
             <Search />
           </a>
         </Link>
         {user ? (
           <div className="flex items-center gap-4">
-            <Link to={routesPaths.saved()}>
+            <Link to={"/saved"}>
               <a aria-label="Save post">
                 <Bookmark />
               </a>
@@ -49,7 +49,7 @@ const Navbar = () => {
                 </div>
               ) : null}
             </span>
-            <Link to={routesPaths.post.new()}>
+            <Link to={"/post/new"}>
               <a aria-label="Create new post">
                 <Button variant="primary">
                   <Edit size={16} />
@@ -58,7 +58,7 @@ const Navbar = () => {
             </Link>
           </div>
         ) : (
-          <Link to={routesPaths.login()}>
+          <Link to={"/login"}>
             <a aria-label="Login">
               <Button variant="primary">
                 <LogIn />

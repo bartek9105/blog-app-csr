@@ -34,7 +34,7 @@ const MobileNavbar = ({ className }: MobileNavbarProps) => {
       )}
     >
       <ul className="flex items-center justify-between">
-        {mobileNavItems.map(({ ariaLabel, renderIcon, href }, index) => (
+        {mobileNavItems.map(({ renderIcon, href }, index) => (
           <Link to={href} key={index}>
             <li className="cursor-pointer">{renderIcon()}</li>
           </Link>

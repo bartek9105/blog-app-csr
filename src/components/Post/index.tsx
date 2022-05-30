@@ -3,7 +3,6 @@ import { capitalize } from "lodash";
 import { formatDistanceToNow } from "date-fns";
 import { MessageCircle, Bookmark } from "react-feather";
 import CategoryHint from "../CategoryHint";
-import { routesPaths } from "../../config/routesPaths.config";
 import { Link } from "react-router-dom";
 
 type PostProps = Omit<Post, "content"> & {
@@ -31,7 +30,7 @@ const PostA = ({
   return (
     <article className="bg-zinc-800 rounded">
       <div className="p-3 flex justify-between items-center">
-        <Link to={routesPaths.category(categories.id)}>
+        <Link to={`/category/${categories.id}`}>
           <CategoryHint
             imgUrl={categories.img_url}
             categoryName={categories.name}

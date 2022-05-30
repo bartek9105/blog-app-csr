@@ -17,7 +17,7 @@ const CategoriesList = ({ categories }: CategoriesListProps) => {
       <ul className="flex overflow-y-hidden list">
         {categories?.map(({ id, name, img_url }) => (
           <li className="mr-4 last-of-type:mr-0" key={id}>
-            <Link to={routesPaths.category(id)}>
+            <Link to={`/category/${id}`}>
               <CategoryBadge name={name} img_url={img_url} />
             </Link>
           </li>

@@ -20,7 +20,7 @@ const CategoriesModal = ({ categories, onClose }: CategoriesModalProps) => {
         <ul className="grid grid-cols-2 gap-y-8 justify-items-center overflow-y-hidden">
           {categories?.map(({ id, name, img_url }) => (
             <li key={id} onClick={onClose}>
-              <Link to={routesPaths.category(id)}>
+              <Link to={`/category/${id}`}>
                 <CategoryBadge name={name} img_url={img_url} />
               </Link>
             </li>
