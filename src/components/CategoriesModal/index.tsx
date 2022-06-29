@@ -13,8 +13,11 @@ const CategoriesModal = ({ categories, onClose }: CategoriesModalProps) => {
   return (
     <div className="fixed top-0 bottom-0 left-0 right-0 bg-zinc-800 z-50 p-8">
       <div className="my-0 mx-auto mw-1/2">
-        <div className="flex items-center text-gray-200 cursor-pointer mb-12 gap-2">
-          <X onClick={onClose} />
+        <div
+          className="flex items-center text-gray-200 cursor-pointer mb-12 gap-2"
+          onClick={onClose}
+        >
+          <X />
           <h1 className="text-sm">Categories</h1>
         </div>
         <ul className="grid grid-cols-2 gap-y-8 justify-items-center overflow-y-hidden">

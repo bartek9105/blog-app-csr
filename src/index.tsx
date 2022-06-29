@@ -5,6 +5,8 @@ import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +18,11 @@ root.render(
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
         <App />
+        <ToastContainer
+          position="bottom-center"
+          autoClose={3000}
+          hideProgressBar
+        />
       </QueryClientProvider>
     </BrowserRouter>
   </React.StrictMode>

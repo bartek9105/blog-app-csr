@@ -31,7 +31,7 @@ const CategoryPage = () => {
               <img
                 alt={currentCategory.name}
                 src={currentCategory.img_url}
-                className="opacity-50 h-64"
+                className="opacity-50 h-64 object-cover"
               />
               <span className="absolute text-gray-200 text-2xl z-10">
                 {currentCategory.name}

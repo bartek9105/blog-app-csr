@@ -9,9 +9,7 @@ const PostSearchResult = ({
 }: PostSearchResultProps) => {
   return (
     <article className="flex text-white gap-4 bg-zinc-700 p-4 rounded-lg">
-      <div className="relative">
-        <img src={img_url} alt={title} className="rounded" />
-      </div>
+      <img src={img_url} alt={title} className="rounded object-fit w-16 h-16" />
       <div className="flex flex-col justify-between text-sm">
         <span className="text-gray-400">{categories.name}</span>
         <h4>{title}</h4>
